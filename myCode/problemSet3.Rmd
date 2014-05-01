@@ -1,0 +1,68 @@
+Problem Set 3
+========================================================
+
+***
+
+### Load the "diamonds" data set in R studio. How many observations are in the data set?
+Response: 53940
+
+***
+
+### How many variables are in the data set?
+Response: 10
+
+***
+
+### How many ordered factors are in the data set?
+Response: 3
+
+***
+
+### What letter represents the best color for a diamond?
+Response: D
+
+As a reminder, you can use these commands to load the diamonds data set. 
+library(ggplot2) #must load the ggplot package first 
+data(diamonds) #loads the diamonds data set since it comes with the ggplot package 
+
+```{r}
+library(ggplot2)
+data(diamonds)
+```
+
+You need to run these command each time you launch RStudio to access the diamonds data set. RStudio won't remember which packages and data sets you loaded unless you change your preferences or save your workspace. 
+
+You should notice that the diamonds data set will be listed as a 'Promise' in the workspace. This is a special object in R, and you need to run a command on the data to fully load the data set. Try running a summary. 
+summary(diamonds)
+
+```{r}
+summary(diamonds)
+str(diamonds)
+```
+
+Some data sets come with R. You can load these data sets by typing the command data(DATA_SET_NAME).
+
+You can learn more about the diamonds data set by typing ?diamonds.
+
+```{r}
+?diamonds
+```
+
+
+Read the help file to determine the best color for the diamonds data set. When you run, diamonds$color, you will notice that the levels of color are set as D < E < F < ...
+
+This does not indicate that D is the worst color but rather an ordering to the colors.
+
+```{r}
+diamonds$color
+```
+
+Create a histogram of the price of all the diamonds in the diamond data set.
+
+TYPE YOUR CODE BELOW THE LINE
+=======================================
+
+```{r}
+qplot(x = price, data = diamonds)
+```
+
